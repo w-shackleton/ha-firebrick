@@ -7,6 +7,6 @@
   "iot_class": "local_polling",
   "requirements": [],
   "version": "0.1.0",
-  "documentation": "https://github.com/w-shackleton/ha-firebrick/blob/main/README.md"
+  "documentation": "https://github.com/w-shackleton/ha-firebrick/blob/main/README.md",
   "issue_tracker": "https://github.com/w-shackleton/ha-firebrick/issues"
 }
