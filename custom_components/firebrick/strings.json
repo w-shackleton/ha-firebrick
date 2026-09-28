@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Use a FireBrick user with view-only access whose allow list includes Home Assistant's IP address.",
+        "data": {
+          "url": "URL",
+          "username": "Username",
+          "password": "Password",
+          "verify_ssl": "Verify SSL certificate"
+        },
+        "data_description": {
+          "url": "Address of the FireBrick web interface, e.g. https://firebrick.example"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate FireBrick",
+        "description": "The FireBrick at {url} rejected the stored credentials.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication, or this Home Assistant is not in the user's allow list",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "reauth_successful": "Re-authentication was successful",
+      "wrong_device": "These credentials belong to a different FireBrick"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "port_link": { "name": "{name} link" },
+      "pppoe_connected": { "name": "{name} connected" }
+    },
+    "sensor": {
+      "port_rx_rate": { "name": "{name} receive rate" },
+      "port_tx_rate": { "name": "{name} transmit rate" },
+      "port_rx_total": { "name": "{name} data received" },
+      "port_tx_total": { "name": "{name} data transmitted" },
+      "port_speed": { "name": "{name} link speed" },
+      "pppoe_connected_since": { "name": "{name} connected since" },
+      "pppoe_ipv4": { "name": "{name} IPv4 address" },
+      "pppoe_ipv6": { "name": "{name} IPv6 address" },
+      "cqm_rx_rate": { "name": "{name} receive rate" },
+      "cqm_tx_rate": { "name": "{name} transmit rate" },
+      "cqm_rx_total": { "name": "{name} data received" },
+      "cqm_tx_total": { "name": "{name} data transmitted" },
+      "cqm_latency_min": { "name": "{name} latency min" },
+      "cqm_latency_avg": { "name": "{name} latency" },
+      "cqm_latency_max": { "name": "{name} latency max" },
+      "cqm_packet_loss": { "name": "{name} packet loss" }
+    }
+  }
+}

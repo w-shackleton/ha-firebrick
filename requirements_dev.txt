@@ -1,0 +1,2 @@
+# Pulls in a matching homeassistant release.
+pytest-homeassistant-custom-component
